@@ -1,0 +1,44 @@
+import random
+
+def gamble(stake,goal,n):
+    
+    wins = []
+    bids = []
+    choices = [1,2,3,4,5,6]
+    w,b = 0,0
+#     wins,bids
+    # profit = 0
+    profit = stake
+    
+    for i in range(n):
+        
+        if stake!=0 and profit!=goal:
+            
+            bids.append(int("1"))
+            b+=1
+            
+            
+            if random.choice(choices) == random.choice(choices):
+                
+                wins.append(int("1"))
+                w+=1
+                profit+=1
+                print("bid won")
+            else:
+                print("bid lost")
+    
+    winPer = (w/b)*100
+    lossPer = ((b-w)/b)*100
+    
+    winAvg= (w/b) 
+    lossAvg = ((b-w)/b)
+    
+    print("winPer",winPer,"lossPer",lossPer,"WAVg",winAvg,"LOSSAvg",lossAvg)
+    
+    
+gamble(20,30,10)
+            
+            
+            
+
+    
